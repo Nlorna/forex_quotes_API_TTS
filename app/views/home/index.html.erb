@@ -1,0 +1,50 @@
+
+
+  <li><%= @response['date'] %></li>
+  <br>
+  <li><% @response['rates'].each do |key, value| %></li>
+    <%= "#{key}-----" %>
+    <%= value %>
+    <br>
+  <% end %>
+</ul>
+
+<h4>Base: United States Dollar </h4>
+<input id= "input_val" type="number" min="0.01" step="0.01" max="2500" value="0.00" autocomplete="off" />
+<br>
+
+<%= select_tag "rates", options_for_select(@response['rates']), :include_blank => true, :autocomplete => :off %>
+<div id="total">Calculated Value</div>
+
+
+<script>
+  $('#rates, #input_val').on("change keyup paste", function() {
+    $('#total').text( $('#rates').val() * $('#input_val').val() );
+  });
+</script>
+
+<style>
+select{
+  padding:0 30px;
+}
+</style>
+
+
+
+<div class="news_container">
+  <div class="panel panel_default">
+      <div class="panel-heading">Business Insider</div>
+  <div class="panel-body"><% @articles.each_with_index do |article, index| %>
+          <div class="article_img">
+            <li><%= link_to (image_tag article['urlToImage'], height: 88, width: 145 ), article['url'], target: :_blank %></li>
+          </div>
+          <div class="article_text">
+            <li><strong><%= link_to (article['title']), article['url'], target: :_blank  %></strong></li>
+            <li>
+              <%= article['author'] %> |
+                <%= time_ago_in_words(article['publishedAt']) %>
+            </li>
+            <li><%= article['description'] %></li>
+          </div>
+          <br>
+        <% end %>
