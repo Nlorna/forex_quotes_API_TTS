@@ -7,23 +7,15 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-<div>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Forex Daily Rates</a>
-      </div>
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'Home', root_path %></li>
-          <li><%= link_to 'News', root_path %></li>
+<body>
+    <div id="header" class="container-fluid">
+      <h2 class="text-center">Currency Calculator</h2>
+    </div>
+    <div id="dateHeader" class="container-fluid blackHeader">
+      <p class="text-center">Daily Exchange Rates provided By Fixer.io</p>
+
+  
+
 
 </div>
 

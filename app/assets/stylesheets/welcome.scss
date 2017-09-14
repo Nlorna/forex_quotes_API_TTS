@@ -1,3 +1,20 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+  width: 100%;
+  background-image: url("https://img15.deviantart.net/ccb6/i/2011/121/f/7/1304312356_subtle_texture_stock_by_redwolf518stock-d3fe0dm.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.news_container{
+  margin:0 auto;
+  max-width: 200px
+
+}
+.article_container{
+  max-width: 200px
+}
